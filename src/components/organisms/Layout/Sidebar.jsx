@@ -11,8 +11,8 @@ const Sidebar = () => {
     { name: 'Settings', href: '/settings', icon: 'Settings' },
   ];
 
-  return (
-    <div className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg border-r border-gray-200">
+return (
+    <div className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg border-r border-gray-200 flex flex-col">
       {/* Logo */}
       <div className="flex items-center px-6 py-6 border-b border-gray-200">
         <div className="w-10 h-10 bg-gradient-purple rounded-lg flex items-center justify-center">
@@ -27,7 +27,7 @@ const Sidebar = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="px-4 py-6 space-y-2">
+      <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
         {navigation.map((item) => (
           <NavLink
             key={item.name}
@@ -47,7 +47,7 @@ const Sidebar = () => {
       </nav>
 
       {/* Bottom Section */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200">
+      <div className="p-4 border-t border-gray-200">
         <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4">
           <div className="flex items-center gap-3 mb-2">
             <ApperIcon name="Star" size={18} className="text-accent" />
